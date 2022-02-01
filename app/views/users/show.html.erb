@@ -2,7 +2,7 @@
   <h2><%= @user.name %></h2>
 </div>
 <div class="discover_movies">
-  <%= button_to "Discover Movies" %>
+  <%= button_to "Discover Movies", "/users/#{@user.id}/discover", method: :get %>
 </div>
 <div class="viewing_parties">
   <p>Upcoming Parties:

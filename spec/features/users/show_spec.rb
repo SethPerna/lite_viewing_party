@@ -18,5 +18,9 @@ RSpec.describe 'users show page' do
     within '.viewing_parties' do
       expect(page).to have_content("Upcoming Parties: #{party_1.movie} #{party_2.movie}")
     end
+    within '.discover_movies' do
+      click_button("Discover Movies")
+      expect(current_path).to eq("/users/#{user_1.id}/discover")
+    end
   end
 end
