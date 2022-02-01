@@ -1,0 +1,18 @@
+<%= form_with model: @user, local: true do |f| %>
+    <div>
+      <div class ="error-msgs">
+        <% if @user.errors.any? %>
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  <%= f.label :user_name %>
+  <%= f.text_field :name %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.submit 'Register' %>
+<% end %>
