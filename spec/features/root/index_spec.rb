@@ -11,12 +11,14 @@ RSpec.describe 'landing page' do
     end
 
     within '.new-user' do
-      click_button 'Create New User'
+      click_button 'Register'
       expect(current_path).to eq(new_user_path)
     end
 
     within '.all-users' do
       expect(page).to have_link(user_1.name)
+      expect(page).to have_link(user_2.name)
+      expect(page).to have_link(user_3.name)
 
       click_link 'user_1.name'
 
