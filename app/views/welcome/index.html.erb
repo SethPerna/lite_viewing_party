@@ -1,0 +1,8 @@
+<div class="new-user">
+  <%= button_to 'Register', '/register', method: :get %>
+</div>
+<div class="all-users">
+  <% @users.each do |user| %>
+    <p>Name: <%= link_to user.name, user_path(user) %></p>
+  <% end %>
+</div>
