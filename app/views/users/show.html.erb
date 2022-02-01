@@ -4,3 +4,9 @@
 <div class="discover_movies">
   <%= button_to "Discover Movies" %>
 </div>
+<div class="viewing_parties">
+  <p>Upcoming Parties:
+  <% @user.parties.each do |party| %>
+    <%= party.movie %>
+  <% end %></p>
+</div>
