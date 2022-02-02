@@ -1,29 +1,11 @@
- <div class="top-rated-movies">
-  <%= button_to "Top Rated Movies", "/users/#{@user.id}/discover", method: :get, params: {top_rated: 'top_rated'}  %>
-  <% if @top_movies %>
-    <ol>
-      <% @top_movies.each do |movie| %>
-        <li><%= movie.title %>: <%= movie.vote_avg  %></li>
-      <% end %>
-    </ol>
+<div class= "discover-movies">
+
+  <%= button_to "Top Rated Movies", "/users/#{@user.id}/movies", method: :get, params: {top_rated: 'top_rated'}  %>
+
+  <%= form_with url: "/users/#{@user.id}/movies", local: true do |form| %>
+    <%= form.label :search, 'Search For Movie by Name' %>
+    <%= form.text_field :search %>
+    <%= form.submit 'Search' %>
   <% end %>
+
 </div>
-<div class= "search-movie">
-<%= form_with url: "/users/#{@user.id}/discover", local: true do |form| %>
-  <%= form.label :search, 'Search For Movie by Name' %>
-  <%= form.text_field :search %>
-  <%= form.submit 'Search' %>
-<% end %>
-<% if @search_movie %>
-  <h5>Found Movies: </h5>
-  <ol>
-    <% @search_movie.each do |movie| %>
-      <li><%= movie.title %>: <%= movie.vote_avg %> </li>
-    <%end  %>
-  <ol> 
-    <% @top_movies.each do |movie| %>
-      <li><%= movie.title %></li>
-    <% end %>
-  </ol>
-  <% end %>
-  </div>
