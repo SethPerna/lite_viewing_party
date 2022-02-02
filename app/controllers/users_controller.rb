@@ -22,6 +22,9 @@ class UsersController < ApplicationController
     if params[:top_rated].present?
       @top_movies = TopRated.new.movies
       render 'discover'
+    elsif params[:search].present?
+      @search_movie = SearchMovie.new.search(params[:search])
+      render 'discover'
     end
   end
 

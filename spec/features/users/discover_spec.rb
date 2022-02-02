@@ -18,15 +18,14 @@ RSpec.describe 'Discover Page' do
   it 'has a form to search for movies' do
     user = User.create!(name: 'user', email: 'email')
 
-    VCR.user_cassette('search_movies') do
+    VCR.use_cassette('search_movies') do
+      visit "/users/#{user.id}/discover"
       within '.search-movie' do
-        visit "/users/#{user.id}/discover"
+        fill_in 'search', with: 'Shaw'
 
-        fill_in 'search', with: 'Shawshank'
-
-        click_on 'Submit'
-
-        expect(page).to have_content('Movie Found: Shawshank Redemption')
+        click_on 'Search'
+        expect(page.status_code).to eq(200)
+        expect(page).to have_content('Fast & Furious Presents: Hobbs & Shaw')
       end
     end
   end
