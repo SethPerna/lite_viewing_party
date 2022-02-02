@@ -23,6 +23,6 @@ RSpec.describe 'Discover Page' do
 
         expect(current_path).to eq(user_movies_path(user))
       end
-    end
+    end 
   end
 end
