@@ -13,4 +13,8 @@ class UsersMoviesController < ApplicationController
       render 'users/movies/index'
     end
   end
+
+  def show
+    require "pry"; binding.pry
+  end
 end
