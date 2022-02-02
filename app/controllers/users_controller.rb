@@ -21,8 +21,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if params[:top_rated].present?
       conn = Faraday.new(url: 'https://api.themoviedb.org') do |faraday|
-        binding.pry
-        faraday.headers['apikey'] = ENV['movie_api_key']
+        faraday.params[:api_key] = ENV['movie_api_key']
       end
       response = conn.get('/3/movie/top_rated')
 
