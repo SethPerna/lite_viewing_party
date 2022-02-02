@@ -18,7 +18,11 @@ class UsersController < ApplicationController
   end
 
   def discover
-    
+    @user = User.find(params[:id])
+    if params[:top_rated].present?
+      @top_movies = TopRated.new.movies
+      render 'discover'
+    end
   end
 
   private
