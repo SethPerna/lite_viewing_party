@@ -8,7 +8,7 @@ RSpec.describe 'Discover Page' do
       visit "/users/#{user.id}/discover"
       within '.top-rated-movies' do
         click_button 'Top Rated Movies'
-
+        save_and_open_page
         expect(page.status_code).to eq(200)
         expect(page).to have_content('Your Eyes Tell')
       end
