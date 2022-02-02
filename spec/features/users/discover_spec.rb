@@ -27,6 +27,6 @@ RSpec.describe 'Discover Page' do
         expect(page.status_code).to eq(200)
         expect(page).to have_content('Fast & Furious Presents: Hobbs & Shaw')
       end
-    end
+    end 
   end
 end

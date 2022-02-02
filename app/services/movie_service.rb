@@ -8,7 +8,7 @@ class MovieService
     response = conn.get(url)
 
     data = JSON.parse(response.body, symbolize_names: true)
-  end
+  end 
 
   def top_rated
     get_url('3/movie/top_rated')[:results]
