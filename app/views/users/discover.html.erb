@@ -1,0 +1,3 @@
+<div class="top-rated-movies">
+  <%= button_to "Top Rated Movies", "/users/#{@user.id}/discover", method: :get, params: {top_rated: 'top_rated'}  %>
+</div>
