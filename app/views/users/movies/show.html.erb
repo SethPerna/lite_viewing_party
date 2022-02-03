@@ -4,9 +4,10 @@
 </div>
 <div class="movie-info">
   <p>Title: <%= @movie.title %></p>
-  <p>Runtime: <%= @movie.runtime %></p>
-  <p>Genre(s): <% @movie.genre[0].each do |id, genre| %>
-                  <%= genre %>
+  <p>Vote Average: <%= @movie.vote_avg %></p>
+  <p>Runtime: <%= "#{@movie.runtime/60} hours #{@movie.runtime%60} minutes" %></p>
+  <p>Genre(s): <% @movie.genre.each do |genre| %>
+                  <%= genre[:name] %>
               <% end %>
   </p>
   <p>Summary: <%= @movie.summary %></p>

@@ -20,9 +20,10 @@ RSpec.describe 'Users movie show page' do
       visit "/users/#{user.id}/movies/730154"
       within '.movie-info' do
         expect(page).to have_content("Title: Your Eyes Tell")
-        expect(page).to have_content("Runtime: ")
-        expect(page).to have_content("Genre(s): ")
-        expect(page).to have_content("Summary: ")
+        expect(page).to have_content("Vote Average: 8.8")
+        expect(page).to have_content("Runtime: 2 hours 3 minutes")
+        expect(page).to have_content("Genre(s): Romance Drama")
+        expect(page).to have_content("Summary: A tragic accident")
       end
     end
   end
