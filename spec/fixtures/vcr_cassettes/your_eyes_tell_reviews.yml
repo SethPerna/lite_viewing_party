@@ -1,0 +1,130 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/730154?api_key=fake_api_key
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 02 Feb 2022 23:49:49 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=28800
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - f568366e3665210d7c96f7395daed9724c32fd0b
+      X-Memc-Age:
+      - '11169'
+      X-Memc-Expires:
+      - '5536'
+      Etag:
+      - W/"c63fa0a4029a569b69195e63a522b573"
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 db72f6ab1d9d27534c6158ca17e3af1c.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - IAD89-C3
+      X-Amz-Cf-Id:
+      - XuTqkVjrA6fu-j9NHGuzposupNZjR-zm5QZu5j1fRo2cuv6dXlSzdw==
+      Age:
+      - '2457'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvdjVDRXQ4OGlEc3VvTWFXMVE1TXN1OVVaZEV0LmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0IjowLCJnZW5yZXMiOlt7ImlkIjoxMDc0OSwibmFtZSI6IlJvbWFuY2UifSx7ImlkIjoxOCwibmFtZSI6IkRyYW1hIn1dLCJob21lcGFnZSI6Imh0dHBzOi8vd3d3LmdhZ2EuY28uanAvaW50bHMveW91cmV5ZXN0ZWxsLyIsImlkIjo3MzAxNTQsImltZGJfaWQiOiJ0dDExMDUxOTc0Iiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJqYSIsIm9yaWdpbmFsX3RpdGxlIjoi44GN44G/44Gu556z44GM5ZWP44GE44GL44GR44Gm44GE44KLIiwib3ZlcnZpZXciOiJBIHRyYWdpYyBhY2NpZGVudCBsZWFkIHRvIEthb3JpJ3MgYmxpbmRuZXNzLCBidXQgc2hlIGNsaW5ncyB0byBsaWZlIGFuZCB0aGUgc21hbGxlciBwbGVhc3VyZXMgaXQgY2FuIHN0aWxsIGFmZm9yZCBoZXIuIFNoZSBtZWV0cyBSdWkgYW5kIGJlZ2lucyB0byB0YWxrIHRvIGhpbS4gUnVpIHdhcyBvbmNlIGEgcHJvbWlzaW5nIGtpY2tib3hlciwgYnV0IHNvbWV0aGluZyBoYXBwZW5lZCBpbiBoaXMgcGFzdC4gS2FvcmkncyBzbWlsZSBicmluZ3Mgb3V0IGEgY2hhbmdlIGluIFJ1aS4gSG93ZXZlciwgdGhlIHR3byBhcmUgY29ubmVjdGVkIGluIG1vcmUgdGhhbiBvbmUgd2F5LiBSdWkgYXR0ZW1wdHMgdG8gZG8gd2hhdCBpcyByaWdodC4iLCJwb3B1bGFyaXR5IjoxMy42MTcsInBvc3Rlcl9wYXRoIjoiL2NWbjhFM0Z4Ymk4SHpZWXRhU2ZzYmxZQzRnbC5qcGciLCJwcm9kdWN0aW9uX2NvbXBhbmllcyI6W3siaWQiOjEzODIwMywibG9nb19wYXRoIjpudWxsLCJuYW1lIjoiRHJhZ29uZmx5IEVudGVydGFpbm1lbnQiLCJvcmlnaW5fY291bnRyeSI6IkpQIn0seyJpZCI6MTQ2MDIsImxvZ29fcGF0aCI6Ii90OWVxeDVRQ0h0dThMeHhnWXppdnFySkFvc3AucG5nIiwibmFtZSI6IkFNVVNFIiwib3JpZ2luX2NvdW50cnkiOiJKUCJ9LHsiaWQiOjg0MDQ4LCJsb2dvX3BhdGgiOiIvbnU4UThJdkcyZmF6ZUk3YXhUblVoQXZ6cnF5LnBuZyIsIm5hbWUiOiJHYWdhIENvcnBvcmF0aW9uIiwib3JpZ2luX2NvdW50cnkiOiJKUCJ9LHsiaWQiOjEwNDE4NCwibG9nb19wYXRoIjpudWxsLCJuYW1lIjoiTGF3c29uIEVudGVydGFpbm1lbnQiLCJvcmlnaW5fY291bnRyeSI6IkpQIn1dLCJwcm9kdWN0aW9uX2NvdW50cmllcyI6W3siaXNvXzMxNjZfMSI6IkpQIiwibmFtZSI6IkphcGFuIn1dLCJyZWxlYXNlX2RhdGUiOiIyMDIwLTEwLTIzIiwicmV2ZW51ZSI6MCwicnVudGltZSI6MTIzLCJzcG9rZW5fbGFuZ3VhZ2VzIjpbeyJlbmdsaXNoX25hbWUiOiJKYXBhbmVzZSIsImlzb182MzlfMSI6ImphIiwibmFtZSI6IuaXpeacrOiqniJ9XSwic3RhdHVzIjoiUmVsZWFzZWQiLCJ0YWdsaW5lIjoiIiwidGl0bGUiOiJZb3VyIEV5ZXMgVGVsbCIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjo4LjgsInZvdGVfY291bnQiOjIyNH0=
+  recorded_at: Thu, 03 Feb 2022 00:30:46 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/730154/reviews?api_key=fake_api_key
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 03 Feb 2022 00:27:55 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=28800
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 4f992b21f2eeb0eea100e04d62542b60520ab15f
+      X-Memc-Age:
+      - '3510'
+      X-Memc-Expires:
+      - '12355'
+      Etag:
+      - W/"0bf02b197ead689ae57a705f375c8ade"
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 08f45c153a856ff7955174d0e6f60744.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - IAD89-C3
+      X-Amz-Cf-Id:
+      - HdLJ9oWvKa93D277tX0ov1qqsd2uOfqaG94qGEiietGBoyzq9RNV0w==
+      Age:
+      - '171'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":730154,"page":1,"results":[],"total_pages":0,"total_results":0}'
+  recorded_at: Thu, 03 Feb 2022 00:30:46 GMT
+recorded_with: VCR 6.0.0

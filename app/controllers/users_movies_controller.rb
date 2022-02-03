@@ -15,6 +15,9 @@ class UsersMoviesController < ApplicationController
   end
 
   def show
-    require "pry"; binding.pry
+    @user = User.find(params[:user_id])
+    @movie = SingleMovie.new.search(params[:id])
+    @reviews = FindReview.new.search(params[:id])
+    render 'users/movies/show'
   end
 end

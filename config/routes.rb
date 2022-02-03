@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
   get '/register', to: 'users#new'
   resources :users, only: %i[show create] do
-    resources :movies, only: %i[index create show], controller: :users_movies
+    resources :movies, only: %i[show index create], controller: :users_movies
   end
   get '/users/:id/discover', to: 'users#discover'
   post '/users/:id/discover', to: 'users#discover'

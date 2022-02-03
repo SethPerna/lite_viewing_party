@@ -1,0 +1,21 @@
+<div class="buttons">
+  <%= button_to "Create Viewing Party" %>
+  <%= button_to "Discover Page", "/users/#{@user.id}/discover" %>
+</div>
+<div class="movie-info">
+  <p>Title: <%= @movie.title %></p>
+  <p>Runtime: <%= @movie.runtime %></p>
+  <p>Genre(s): <% @movie.genre[0].each do |id, genre| %>
+                  <%= genre %>
+              <% end %>
+  </p>
+  <p>Summary: <%= @movie.summary %></p>
+  <p>Total Reviews: <%= @reviews.count %></p>
+  <p>Authors: <% @reviews.each do |review| %>
+              <%= review.author %>
+              <% end %>
+              </p>
+  <p>Title: <%= @movie.title %></p>
+  <p>Title: <%= @movie.title %></p>
+  <p>Title: <%= @movie.title %></p>
+</div>
