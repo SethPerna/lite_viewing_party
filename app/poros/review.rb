@@ -1,8 +1,7 @@
 class Review
-  attr_reader :name, :content
+  attr_reader :username, :content
   def initialize(data)
-    require "pry"; binding.pry
-    @name = data[:name]
+    @username = data[:author_details][:username]
     @content = data[:content]
   end
 end

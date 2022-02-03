@@ -25,4 +25,8 @@ class MovieService
   def get_reviews(movie_id)
     get_url("3/movie/#{movie_id}/reviews")[:results]
   end
+
+  def get_cast(movie_id)
+    get_url("3/movie/#{movie_id}/credits")[:cast]
+  end
 end

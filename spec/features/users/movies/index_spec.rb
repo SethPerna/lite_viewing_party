@@ -11,6 +11,8 @@ RSpec.describe 'Users movies page' do
 
         expect(current_path).to eq(user_movies_path(user))
       end
+    end
+    VCR.use_cassette('your_eyes_tell') do
       within '.top-rated-movies' do
         expect(page.status_code).to eq(200)
         expect(page).to have_content('Your Eyes Tell | Vote Average: 8.8 ')

@@ -3,13 +3,14 @@ require 'rails_helper'
 RSpec.describe 'Users movie show page' do
   it 'has buttons to create viewing party and to return to discovery page' do
     user = User.create!(name: 'user', email: 'email')
-
-    visit "/users/#{user.id}/movies/730154"
-    within '.buttons' do
-      expect(page).to have_button("Create Viewing Party")
-      expect(page).to have_button("Discover Page")
-      click_button("Discover Page")
-      expect(current_path).to eq("/users/#{user.id}/discover")
+    VCR.use_cassette('your_eyes_tell') do
+      visit "/users/#{user.id}/movies/730154"
+      within '.buttons' do
+        expect(page).to have_button("Create Viewing Party")
+        expect(page).to have_button("Discover Page")
+        click_button("Discover Page")
+        expect(current_path).to eq("/users/#{user.id}/discover")
+      end
     end
   end
 
@@ -30,11 +31,23 @@ RSpec.describe 'Users movie show page' do
   it 'review count & author info' do
     user = User.create!(name: 'user', email: 'email')
 
-    VCR.use_cassette('your_eyes_tell_reviews') do
-      visit "/users/#{user.id}/movies/730154"
+    VCR.use_cassette('cloud_atlas_reviews') do
+      visit "/users/#{user.id}/movies/83542"
       within '.movie-info' do
-        expect(page).to have_content("Total Reviews: 25")
-        expect(page).to have_content("Author: Fuckface")
+        expect(page).to have_content("Total Reviews: 3")
+        expect(page).to have_content("Author: tanty")
+        expect(page).to have_content("Review: Interesting film with")
+      end
+    end
+  end
+
+  it 'lists the first ten cast members' do
+    user = User.create!(name: 'user', email: 'email')
+
+    VCR.use_cassette('cloud_atlas_cast') do
+      visit "/users/#{user.id}/movies/83542"
+      within '.movie-info' do
+        expect(page).to have_content("Tom Hanks as Dr. Henry Goose")
       end
     end
   end

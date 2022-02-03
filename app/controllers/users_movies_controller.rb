@@ -18,6 +18,7 @@ class UsersMoviesController < ApplicationController
     @user = User.find(params[:user_id])
     @movie = SingleMovie.new.search(params[:id])
     @reviews = FindReview.new.search(params[:id])
+    @cast = MovieFacade.cast(params[:id])
     render 'users/movies/show'
   end
 end
