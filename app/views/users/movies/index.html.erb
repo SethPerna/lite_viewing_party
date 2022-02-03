@@ -2,7 +2,7 @@
   <% if @top_movies %>
     <ol>
       <% @top_movies.each do |movie| %>
-        <li><%= movie.title %>: <%= movie.vote_avg  %></li>
+        <li><%= link_to movie.title, user_movie_path(@user, movie.id) %> | Vote Average: <%= movie.vote_avg  %></li>
       <% end %>
     </ol>
   <% end %>
@@ -12,7 +12,7 @@
   <h5>Found Movies: </h5>
   <ol>
     <% @search_movie.each do |movie| %>
-      <li><%= movie.title %>: <%= movie.vote_avg %> </li>
+      <li><%= movie.title %> | Vote Average: <%= movie.vote_avg %> </li>
     <%end  %>
  <%end  %>
   <ol>
