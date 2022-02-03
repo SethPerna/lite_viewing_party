@@ -1,0 +1,20 @@
+<div class="new-party-form">
+  <h3><%= @movie.title %></h3>
+  <%= form_with url: new_user_movie_party_path(@user, @movie.id), local: true do |f| %>
+    <%= f.label :duration %>
+    <%= f.text_field :duration, value: @movie.runtime %>
+
+    <%= f.label :date %>
+    <%= f.date_select :date %>
+
+    <%= f.label :time %>
+    <%= f.time_select :time, {:ampm => true} %>
+
+    <% @users.each do |user| %>
+      <%= f.label user.name %>
+      <%= f.check_box user.name %>
+    <% end %>
+
+    <%= f.submit "Create Party" %>
+  <% end %>
+</div>
