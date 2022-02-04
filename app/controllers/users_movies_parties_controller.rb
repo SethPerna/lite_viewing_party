@@ -12,6 +12,7 @@ class UsersMoviesPartiesController < ApplicationController
       redirect_to new_user_movie_party_path(params[:user_id])
     elsif party = Party.create(date: party_date, start_time: party_time, duration: params[:duration],
                                movie: @movie.title, host: params[:user_id])
+                  UserParty.create(party_id: party.id, user_id: params[:user_id])
       if params[:invites].present?
         params[:invites].each do |invite|
           UserParty.create(party_id: party.id, user_id: invite.to_i) unless invite.nil?
