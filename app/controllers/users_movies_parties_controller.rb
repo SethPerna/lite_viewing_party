@@ -6,22 +6,22 @@ class UsersMoviesPartiesController < ApplicationController
   end
 
   def create
-    binding.pry
-    Party.create!(date: "2022-02-06", duration: 160, start_time: '7:00', movie: 'Jurasic Park')
-    require "pry"; binding.pry
-    Party.create(date: date, duration: params[:duration], start_time: start_time, movie: @movie.title)
+    @movie = SingleMovie.new.search(params[:movie_id])
+    if @movie.runtime.to_i > params[:duration].to_i
+      render 'new', flash[:duration] = "Duration can't be shorter than movies runtime."
+    elsif party = Party.create(date: party_date, start_time: party_time, duration: params[:duration],
+                               movie: @movie.title, host: params[:user_id])
+      redirect_to user_path(params[:user_id])
+    end
   end
 
   private
 
   def party_date
-    params["date(1i)"] + "-" + params["date(2i)"] + "-" + params["date(3i)"]
+    params['date(1i)'] + '-' + params['date(2i)'] + '-' + params['date(3i)']
   end
 
   def party_time
-    params["time(4i)"] + ":" + params["time(5i)"]
+    params['time(4i)'] + ':' + params['time(5i)']
   end
-
-  def party_params
-    params.permit(date: party_date, duration: parmas[:duration], start_time: party_time, movie: @movie.title)
 end
