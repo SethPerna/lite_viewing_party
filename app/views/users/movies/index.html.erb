@@ -12,7 +12,7 @@
   <h5>Found Movies: </h5>
   <ol>
     <% @search_movie.each do |movie| %>
-      <li><%= link_to movie.title, user_movie_path(@user, movie.id) %> | Vote Average: <%= movie.vote_avg %> </li>
+      <li><%= link_to movie.title, user_movie_path(@user, movie.id), method: :get %> | Vote Average: <%= movie.vote_avg %> </li>
     <%end  %>
  <%end  %>
   <ol>
