@@ -18,7 +18,7 @@ RSpec.describe 'new viewing party page' do
         check("#{user_2.name}")
         expect(page).to have_button("Create Party")
         click_button("Create Party")
-        expect(current_path).to eq()
+        expect(current_path).to eq(user_path(user_1))
       end
     end
   end
