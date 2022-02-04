@@ -10,8 +10,10 @@
     <%= f.label :time %>
     <%= f.time_select :time, {:ampm => true} %>
 
-      <%= f.label :guests %>
-      <%= f.collection_check_boxes :invites, @users, :id, :email %>
+    <% @users.each do |user| %>
+      <%= f.label user.name %>
+      <%= f.check_box user.name %>
+    <% end %>
 
     <%= f.submit "Create Party" %>
   <% end %>
