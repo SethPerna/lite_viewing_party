@@ -8,5 +8,14 @@
   <p>Upcoming Parties:
   <% @user.parties.each do |party| %>
     <%= party.movie %>
+    <div>
+        <div class= "invites-<%= party.id %>">
+      <h1>Party Guests: </h1>
+
+      <% party.users.each do |user| %>
+      <p class="#{user.id}"><b><%= user.name %></b></p>
+      <% end %>
+        </div>
+    </div>
   <% end %></p>
 </div>
