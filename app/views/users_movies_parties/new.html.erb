@@ -1,0 +1,18 @@
+<div class="new-party-form">
+  <h3><%= @movie.title %></h3>
+  <%= form_with url: user_movie_parties_path(@user, @movie.id), local: true do |f| %>
+    <%= f.label :duration %>
+    <%= f.text_field :duration, value: @movie.runtime %>
+
+    <%= f.label :date %>
+    <%= f.date_select :date %>
+
+    <%= f.label :time %>
+    <%= f.time_select :time, {:ampm => true} %>
+
+      <%= f.label :guests %>
+      <%= f.collection_check_boxes :invites, @users, :id, :email %>
+
+    <%= f.submit "Create Party" %>
+  <% end %>
+</div>
