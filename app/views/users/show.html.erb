@@ -13,7 +13,11 @@
       <h1>Party Guests: </h1>
 
       <% party.users.each do |user| %>
-      <p class="#{user.id}"><b><%= user.name %></b></p>
+        <% if party.host == user.id %>
+          <p class=<%="#{user.name}"%>><b><%= user.name %></b></p>
+        <% else %>
+          <p><%= user.name %></p>
+        <% end %>
       <% end %>
         </div>
     </div>
