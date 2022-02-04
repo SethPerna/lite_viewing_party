@@ -17,8 +17,8 @@ RSpec.describe 'Users movies page' do
         expect(page.status_code).to eq(200)
         expect(page).to have_content('Your Eyes Tell | Vote Average: 8.8 ')
         expect(page).to have_content('The Lord of the Rings: The Return of the King | Vote Average: 8.5')
-        expect(page).to have_link("Your Eyes Tell")
-        click_link("Your Eyes Tell")
+        expect(page).to have_link('Your Eyes Tell')
+        click_link('Your Eyes Tell')
         expect(current_path).to eq("/users/#{user.id}/movies/730154")
       end
     end

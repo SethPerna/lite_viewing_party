@@ -8,9 +8,15 @@ class UsersMoviesPartiesController < ApplicationController
   def create
     @movie = SingleMovie.new.search(params[:movie_id])
     if @movie.runtime.to_i > params[:duration].to_i
-      render 'new', flash[:duration] = "Duration can't be shorter than movies runtime."
+      flash[:duration] = "Duration can't be shorter than movies runtime."
+      redirect_to new_user_movie_party_path(params[:user_id])
     elsif party = Party.create(date: party_date, start_time: party_time, duration: params[:duration],
                                movie: @movie.title, host: params[:user_id])
+      if params[:invites].present?
+        params[:invites].each do |invite|
+          UserParty.create(party_id: party.id, user_id: invite.to_i) unless invite.nil?
+        end
+      end
       redirect_to user_path(params[:user_id])
     end
   end
