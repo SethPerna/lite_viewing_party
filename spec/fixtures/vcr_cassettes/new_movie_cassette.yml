@@ -52,18 +52,82 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
+      - 1.1 ee9de9e6182ae0c8e8f119177e905244.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - bXfH0uGvYglCm_ehJi97bwNIqjQb39r7vHqJu182AAMk2yqM7wrewQ==
+      Age:
+      - '342'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvdjVDRXQ4OGlEc3VvTWFXMVE1TXN1OVVaZEV0LmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0IjowLCJnZW5yZXMiOlt7ImlkIjoxMDc0OSwibmFtZSI6IlJvbWFuY2UifSx7ImlkIjoxOCwibmFtZSI6IkRyYW1hIn1dLCJob21lcGFnZSI6Imh0dHBzOi8vd3d3LmdhZ2EuY28uanAvaW50bHMveW91cmV5ZXN0ZWxsLyIsImlkIjo3MzAxNTQsImltZGJfaWQiOiJ0dDExMDUxOTc0Iiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJqYSIsIm9yaWdpbmFsX3RpdGxlIjoi44GN44G/44Gu556z44GM5ZWP44GE44GL44GR44Gm44GE44KLIiwib3ZlcnZpZXciOiJBIHRyYWdpYyBhY2NpZGVudCBsZWFkIHRvIEthb3JpJ3MgYmxpbmRuZXNzLCBidXQgc2hlIGNsaW5ncyB0byBsaWZlIGFuZCB0aGUgc21hbGxlciBwbGVhc3VyZXMgaXQgY2FuIHN0aWxsIGFmZm9yZCBoZXIuIFNoZSBtZWV0cyBSdWkgYW5kIGJlZ2lucyB0byB0YWxrIHRvIGhpbS4gUnVpIHdhcyBvbmNlIGEgcHJvbWlzaW5nIGtpY2tib3hlciwgYnV0IHNvbWV0aGluZyBoYXBwZW5lZCBpbiBoaXMgcGFzdC4gS2FvcmkncyBzbWlsZSBicmluZ3Mgb3V0IGEgY2hhbmdlIGluIFJ1aS4gSG93ZXZlciwgdGhlIHR3byBhcmUgY29ubmVjdGVkIGluIG1vcmUgdGhhbiBvbmUgd2F5LiBSdWkgYXR0ZW1wdHMgdG8gZG8gd2hhdCBpcyByaWdodC4iLCJwb3B1bGFyaXR5IjoxMy45MzYsInBvc3Rlcl9wYXRoIjoiL2NWbjhFM0Z4Ymk4SHpZWXRhU2ZzYmxZQzRnbC5qcGciLCJwcm9kdWN0aW9uX2NvbXBhbmllcyI6W3siaWQiOjEzODIwMywibG9nb19wYXRoIjpudWxsLCJuYW1lIjoiRHJhZ29uZmx5IEVudGVydGFpbm1lbnQiLCJvcmlnaW5fY291bnRyeSI6IkpQIn0seyJpZCI6MTQ2MDIsImxvZ29fcGF0aCI6Ii90OWVxeDVRQ0h0dThMeHhnWXppdnFySkFvc3AucG5nIiwibmFtZSI6IkFNVVNFIiwib3JpZ2luX2NvdW50cnkiOiJKUCJ9LHsiaWQiOjg0MDQ4LCJsb2dvX3BhdGgiOiIvbnU4UThJdkcyZmF6ZUk3YXhUblVoQXZ6cnF5LnBuZyIsIm5hbWUiOiJHYWdhIENvcnBvcmF0aW9uIiwib3JpZ2luX2NvdW50cnkiOiJKUCJ9LHsiaWQiOjEwNDE4NCwibG9nb19wYXRoIjpudWxsLCJuYW1lIjoiTGF3c29uIEVudGVydGFpbm1lbnQiLCJvcmlnaW5fY291bnRyeSI6IkpQIn1dLCJwcm9kdWN0aW9uX2NvdW50cmllcyI6W3siaXNvXzMxNjZfMSI6IkpQIiwibmFtZSI6IkphcGFuIn1dLCJyZWxlYXNlX2RhdGUiOiIyMDIwLTEwLTIzIiwicmV2ZW51ZSI6MCwicnVudGltZSI6MTIzLCJzcG9rZW5fbGFuZ3VhZ2VzIjpbeyJlbmdsaXNoX25hbWUiOiJKYXBhbmVzZSIsImlzb182MzlfMSI6ImphIiwibmFtZSI6IuaXpeacrOiqniJ9XSwic3RhdHVzIjoiUmVsZWFzZWQiLCJ0YWdsaW5lIjoiIiwidGl0bGUiOiJZb3VyIEV5ZXMgVGVsbCIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjo4LjgsInZvdGVfY291bnQiOjIyN30=
+  recorded_at: Sat, 05 Feb 2022 23:34:32 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/730154?api_key=fake_api_key
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Sat, 05 Feb 2022 23:28:50 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=28800
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - f568366e3665210d7c96f7395daed9724c32fd0b
+      X-Memc-Age:
+      - '2565'
+      X-Memc-Expires:
+      - '14769'
+      Etag:
+      - W/"3e74376272c7163d2895c057495a275d"
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
       - 1.1 a44b9db7a2d103360945ab52619e5016.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - btqQINh8YzdIyi7gmknN6yUPPSWAY6RUNQn9-oIYJU6ZnpCll8zH0g==
+      - 3hocu9LbeDcbZOr3ttTJZjGhCY2MMYpFRUIOR9CsEZRvNPDFFTHi0w==
       Age:
-      - '457'
+      - '342'
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvdjVDRXQ4OGlEc3VvTWFXMVE1TXN1OVVaZEV0LmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0IjowLCJnZW5yZXMiOlt7ImlkIjoxMDc0OSwibmFtZSI6IlJvbWFuY2UifSx7ImlkIjoxOCwibmFtZSI6IkRyYW1hIn1dLCJob21lcGFnZSI6Imh0dHBzOi8vd3d3LmdhZ2EuY28uanAvaW50bHMveW91cmV5ZXN0ZWxsLyIsImlkIjo3MzAxNTQsImltZGJfaWQiOiJ0dDExMDUxOTc0Iiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJqYSIsIm9yaWdpbmFsX3RpdGxlIjoi44GN44G/44Gu556z44GM5ZWP44GE44GL44GR44Gm44GE44KLIiwib3ZlcnZpZXciOiJBIHRyYWdpYyBhY2NpZGVudCBsZWFkIHRvIEthb3JpJ3MgYmxpbmRuZXNzLCBidXQgc2hlIGNsaW5ncyB0byBsaWZlIGFuZCB0aGUgc21hbGxlciBwbGVhc3VyZXMgaXQgY2FuIHN0aWxsIGFmZm9yZCBoZXIuIFNoZSBtZWV0cyBSdWkgYW5kIGJlZ2lucyB0byB0YWxrIHRvIGhpbS4gUnVpIHdhcyBvbmNlIGEgcHJvbWlzaW5nIGtpY2tib3hlciwgYnV0IHNvbWV0aGluZyBoYXBwZW5lZCBpbiBoaXMgcGFzdC4gS2FvcmkncyBzbWlsZSBicmluZ3Mgb3V0IGEgY2hhbmdlIGluIFJ1aS4gSG93ZXZlciwgdGhlIHR3byBhcmUgY29ubmVjdGVkIGluIG1vcmUgdGhhbiBvbmUgd2F5LiBSdWkgYXR0ZW1wdHMgdG8gZG8gd2hhdCBpcyByaWdodC4iLCJwb3B1bGFyaXR5IjoxMy45MzYsInBvc3Rlcl9wYXRoIjoiL2NWbjhFM0Z4Ymk4SHpZWXRhU2ZzYmxZQzRnbC5qcGciLCJwcm9kdWN0aW9uX2NvbXBhbmllcyI6W3siaWQiOjEzODIwMywibG9nb19wYXRoIjpudWxsLCJuYW1lIjoiRHJhZ29uZmx5IEVudGVydGFpbm1lbnQiLCJvcmlnaW5fY291bnRyeSI6IkpQIn0seyJpZCI6MTQ2MDIsImxvZ29fcGF0aCI6Ii90OWVxeDVRQ0h0dThMeHhnWXppdnFySkFvc3AucG5nIiwibmFtZSI6IkFNVVNFIiwib3JpZ2luX2NvdW50cnkiOiJKUCJ9LHsiaWQiOjg0MDQ4LCJsb2dvX3BhdGgiOiIvbnU4UThJdkcyZmF6ZUk3YXhUblVoQXZ6cnF5LnBuZyIsIm5hbWUiOiJHYWdhIENvcnBvcmF0aW9uIiwib3JpZ2luX2NvdW50cnkiOiJKUCJ9LHsiaWQiOjEwNDE4NCwibG9nb19wYXRoIjpudWxsLCJuYW1lIjoiTGF3c29uIEVudGVydGFpbm1lbnQiLCJvcmlnaW5fY291bnRyeSI6IkpQIn1dLCJwcm9kdWN0aW9uX2NvdW50cmllcyI6W3siaXNvXzMxNjZfMSI6IkpQIiwibmFtZSI6IkphcGFuIn1dLCJyZWxlYXNlX2RhdGUiOiIyMDIwLTEwLTIzIiwicmV2ZW51ZSI6MCwicnVudGltZSI6MTIzLCJzcG9rZW5fbGFuZ3VhZ2VzIjpbeyJlbmdsaXNoX25hbWUiOiJKYXBhbmVzZSIsImlzb182MzlfMSI6ImphIiwibmFtZSI6IuaXpeacrOiqniJ9XSwic3RhdHVzIjoiUmVsZWFzZWQiLCJ0YWdsaW5lIjoiIiwidGl0bGUiOiJZb3VyIEV5ZXMgVGVsbCIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjo4LjgsInZvdGVfY291bnQiOjIyN30=
-  recorded_at: Sat, 05 Feb 2022 23:36:27 GMT
+  recorded_at: Sat, 05 Feb 2022 23:34:32 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/730154?api_key=fake_api_key
@@ -116,18 +180,18 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 4b2d2d4c49521bf403522140b78283a0.cloudfront.net (CloudFront)
+      - 1.1 824a5d9ed02451bcb68b15ae5991dce0.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - 1bVw3jCEYs-Vd2WuquiDcwIfSOU0QYXAoOjgWIFJgsbL7iqTvuhb4Q==
+      - eDXWQOxmd4ta-pe0w6SUs4vIAS9OJDQvRdx2xivkgeyoSg85MqKzBQ==
       Age:
-      - '457'
+      - '342'
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvdjVDRXQ4OGlEc3VvTWFXMVE1TXN1OVVaZEV0LmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0IjowLCJnZW5yZXMiOlt7ImlkIjoxMDc0OSwibmFtZSI6IlJvbWFuY2UifSx7ImlkIjoxOCwibmFtZSI6IkRyYW1hIn1dLCJob21lcGFnZSI6Imh0dHBzOi8vd3d3LmdhZ2EuY28uanAvaW50bHMveW91cmV5ZXN0ZWxsLyIsImlkIjo3MzAxNTQsImltZGJfaWQiOiJ0dDExMDUxOTc0Iiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJqYSIsIm9yaWdpbmFsX3RpdGxlIjoi44GN44G/44Gu556z44GM5ZWP44GE44GL44GR44Gm44GE44KLIiwib3ZlcnZpZXciOiJBIHRyYWdpYyBhY2NpZGVudCBsZWFkIHRvIEthb3JpJ3MgYmxpbmRuZXNzLCBidXQgc2hlIGNsaW5ncyB0byBsaWZlIGFuZCB0aGUgc21hbGxlciBwbGVhc3VyZXMgaXQgY2FuIHN0aWxsIGFmZm9yZCBoZXIuIFNoZSBtZWV0cyBSdWkgYW5kIGJlZ2lucyB0byB0YWxrIHRvIGhpbS4gUnVpIHdhcyBvbmNlIGEgcHJvbWlzaW5nIGtpY2tib3hlciwgYnV0IHNvbWV0aGluZyBoYXBwZW5lZCBpbiBoaXMgcGFzdC4gS2FvcmkncyBzbWlsZSBicmluZ3Mgb3V0IGEgY2hhbmdlIGluIFJ1aS4gSG93ZXZlciwgdGhlIHR3byBhcmUgY29ubmVjdGVkIGluIG1vcmUgdGhhbiBvbmUgd2F5LiBSdWkgYXR0ZW1wdHMgdG8gZG8gd2hhdCBpcyByaWdodC4iLCJwb3B1bGFyaXR5IjoxMy45MzYsInBvc3Rlcl9wYXRoIjoiL2NWbjhFM0Z4Ymk4SHpZWXRhU2ZzYmxZQzRnbC5qcGciLCJwcm9kdWN0aW9uX2NvbXBhbmllcyI6W3siaWQiOjEzODIwMywibG9nb19wYXRoIjpudWxsLCJuYW1lIjoiRHJhZ29uZmx5IEVudGVydGFpbm1lbnQiLCJvcmlnaW5fY291bnRyeSI6IkpQIn0seyJpZCI6MTQ2MDIsImxvZ29fcGF0aCI6Ii90OWVxeDVRQ0h0dThMeHhnWXppdnFySkFvc3AucG5nIiwibmFtZSI6IkFNVVNFIiwib3JpZ2luX2NvdW50cnkiOiJKUCJ9LHsiaWQiOjg0MDQ4LCJsb2dvX3BhdGgiOiIvbnU4UThJdkcyZmF6ZUk3YXhUblVoQXZ6cnF5LnBuZyIsIm5hbWUiOiJHYWdhIENvcnBvcmF0aW9uIiwib3JpZ2luX2NvdW50cnkiOiJKUCJ9LHsiaWQiOjEwNDE4NCwibG9nb19wYXRoIjpudWxsLCJuYW1lIjoiTGF3c29uIEVudGVydGFpbm1lbnQiLCJvcmlnaW5fY291bnRyeSI6IkpQIn1dLCJwcm9kdWN0aW9uX2NvdW50cmllcyI6W3siaXNvXzMxNjZfMSI6IkpQIiwibmFtZSI6IkphcGFuIn1dLCJyZWxlYXNlX2RhdGUiOiIyMDIwLTEwLTIzIiwicmV2ZW51ZSI6MCwicnVudGltZSI6MTIzLCJzcG9rZW5fbGFuZ3VhZ2VzIjpbeyJlbmdsaXNoX25hbWUiOiJKYXBhbmVzZSIsImlzb182MzlfMSI6ImphIiwibmFtZSI6IuaXpeacrOiqniJ9XSwic3RhdHVzIjoiUmVsZWFzZWQiLCJ0YWdsaW5lIjoiIiwidGl0bGUiOiJZb3VyIEV5ZXMgVGVsbCIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjo4LjgsInZvdGVfY291bnQiOjIyN30=
-  recorded_at: Sat, 05 Feb 2022 23:36:27 GMT
+  recorded_at: Sat, 05 Feb 2022 23:34:32 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/730154?api_key=fake_api_key
@@ -180,16 +244,16 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 788f6ff13e09a712f5227945fa34a518.cloudfront.net (CloudFront)
+      - 1.1 824a5d9ed02451bcb68b15ae5991dce0.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - uh3mEueEEduLfVseNESd47xfKjD2eVj5uWEx-s5vSe0FKDrxnTsEgA==
+      - be8qRWgQfWN55VeOvulyj-Fgu0ic8RBETdiMsWMooY8HXVWesy9J6g==
       Age:
-      - '458'
+      - '343'
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvdjVDRXQ4OGlEc3VvTWFXMVE1TXN1OVVaZEV0LmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0IjowLCJnZW5yZXMiOlt7ImlkIjoxMDc0OSwibmFtZSI6IlJvbWFuY2UifSx7ImlkIjoxOCwibmFtZSI6IkRyYW1hIn1dLCJob21lcGFnZSI6Imh0dHBzOi8vd3d3LmdhZ2EuY28uanAvaW50bHMveW91cmV5ZXN0ZWxsLyIsImlkIjo3MzAxNTQsImltZGJfaWQiOiJ0dDExMDUxOTc0Iiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJqYSIsIm9yaWdpbmFsX3RpdGxlIjoi44GN44G/44Gu556z44GM5ZWP44GE44GL44GR44Gm44GE44KLIiwib3ZlcnZpZXciOiJBIHRyYWdpYyBhY2NpZGVudCBsZWFkIHRvIEthb3JpJ3MgYmxpbmRuZXNzLCBidXQgc2hlIGNsaW5ncyB0byBsaWZlIGFuZCB0aGUgc21hbGxlciBwbGVhc3VyZXMgaXQgY2FuIHN0aWxsIGFmZm9yZCBoZXIuIFNoZSBtZWV0cyBSdWkgYW5kIGJlZ2lucyB0byB0YWxrIHRvIGhpbS4gUnVpIHdhcyBvbmNlIGEgcHJvbWlzaW5nIGtpY2tib3hlciwgYnV0IHNvbWV0aGluZyBoYXBwZW5lZCBpbiBoaXMgcGFzdC4gS2FvcmkncyBzbWlsZSBicmluZ3Mgb3V0IGEgY2hhbmdlIGluIFJ1aS4gSG93ZXZlciwgdGhlIHR3byBhcmUgY29ubmVjdGVkIGluIG1vcmUgdGhhbiBvbmUgd2F5LiBSdWkgYXR0ZW1wdHMgdG8gZG8gd2hhdCBpcyByaWdodC4iLCJwb3B1bGFyaXR5IjoxMy45MzYsInBvc3Rlcl9wYXRoIjoiL2NWbjhFM0Z4Ymk4SHpZWXRhU2ZzYmxZQzRnbC5qcGciLCJwcm9kdWN0aW9uX2NvbXBhbmllcyI6W3siaWQiOjEzODIwMywibG9nb19wYXRoIjpudWxsLCJuYW1lIjoiRHJhZ29uZmx5IEVudGVydGFpbm1lbnQiLCJvcmlnaW5fY291bnRyeSI6IkpQIn0seyJpZCI6MTQ2MDIsImxvZ29fcGF0aCI6Ii90OWVxeDVRQ0h0dThMeHhnWXppdnFySkFvc3AucG5nIiwibmFtZSI6IkFNVVNFIiwib3JpZ2luX2NvdW50cnkiOiJKUCJ9LHsiaWQiOjg0MDQ4LCJsb2dvX3BhdGgiOiIvbnU4UThJdkcyZmF6ZUk3YXhUblVoQXZ6cnF5LnBuZyIsIm5hbWUiOiJHYWdhIENvcnBvcmF0aW9uIiwib3JpZ2luX2NvdW50cnkiOiJKUCJ9LHsiaWQiOjEwNDE4NCwibG9nb19wYXRoIjpudWxsLCJuYW1lIjoiTGF3c29uIEVudGVydGFpbm1lbnQiLCJvcmlnaW5fY291bnRyeSI6IkpQIn1dLCJwcm9kdWN0aW9uX2NvdW50cmllcyI6W3siaXNvXzMxNjZfMSI6IkpQIiwibmFtZSI6IkphcGFuIn1dLCJyZWxlYXNlX2RhdGUiOiIyMDIwLTEwLTIzIiwicmV2ZW51ZSI6MCwicnVudGltZSI6MTIzLCJzcG9rZW5fbGFuZ3VhZ2VzIjpbeyJlbmdsaXNoX25hbWUiOiJKYXBhbmVzZSIsImlzb182MzlfMSI6ImphIiwibmFtZSI6IuaXpeacrOiqniJ9XSwic3RhdHVzIjoiUmVsZWFzZWQiLCJ0YWdsaW5lIjoiIiwidGl0bGUiOiJZb3VyIEV5ZXMgVGVsbCIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjo4LjgsInZvdGVfY291bnQiOjIyN30=
-  recorded_at: Sat, 05 Feb 2022 23:36:27 GMT
+  recorded_at: Sat, 05 Feb 2022 23:34:33 GMT
 recorded_with: VCR 6.0.0

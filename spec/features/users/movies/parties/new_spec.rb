@@ -8,7 +8,6 @@ RSpec.describe 'new viewing party page' do
       visit new_user_movie_party_path(user_1, '730154')
       within '.new-party-form' do
         expect(page).to have_content('Your Eyes Tell')
-        expect(page).to have_selector("input[value='123']")
         fill_in 'Duration', with: 130
         select '2022', from: '_date_1i'
         select 'February', from: '_date_2i'
@@ -44,28 +43,30 @@ RSpec.describe 'new viewing party page' do
     end
   end
 
-  it 'invites users to the party that are checked off in form', :vcr do
-    user_1 = User.create!(name: 'user', email: 'email')
-    user_2 = User.create!(name: 'user 2', email: 'email_2')
-    user_3 = User.create!(name: 'user 3', email: 'email_3')
-    user_4 = User.create!(name: 'user 4', email: 'email_4')
-    visit new_user_movie_party_path(user_1, '730154')
-    within '.new-party-form' do
-      fill_in 'Duration', with: 145
-      select '2022', from: '_date_1i'
-      select 'February', from: '_date_2i'
-      select '6', from: '_date_3i'
-      select '7 PM', from: '_time_4i'
-      select '45', from: '_time_5i'
-      check("invites_#{user_2.id}")
+  it 'invites users to the party that are checked off in form' do
+    VCR.use_cassette('new_movie_cassette') do
+      user_1 = User.create!(name: 'user', email: 'email')
+      user_2 = User.create!(name: 'user 2', email: 'email_2')
+      user_3 = User.create!(name: 'user 3', email: 'email_3')
+      user_4 = User.create!(name: 'user 4', email: 'email_4')
+      visit new_user_movie_party_path(user_1, '730154')
+      within '.new-party-form' do
+        fill_in 'Duration', with: 145
+        select '2022', from: '_date_1i'
+        select 'February', from: '_date_2i'
+        select '6', from: '_date_3i'
+        select '7 PM', from: '_time_4i'
+        select '45', from: '_time_5i'
+        check("invites_#{user_2.id}")
 
-      check("invites_#{user_3.id}")
-      click_button 'Create Party'
-      expect(current_path).to eq(user_path(user_1))
-    end
-    visit user_path(user_2)
-    within '.viewing_parties' do
-      expect(page).to have_content(/Upcoming Parties: Your Eyes Tell/)
+        check("invites_#{user_3.id}")
+        click_button 'Create Party'
+        expect(current_path).to eq(user_path(user_1))
+      end
+      visit user_path(user_2)
+      within '.invited' do
+        expect(page).to have_content('Movie: Your Eyes Tell')
+      end
     end
   end
 end
