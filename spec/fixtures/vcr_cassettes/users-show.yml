@@ -1,0 +1,148 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/730154?api_key=fake_api_key
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Sat, 05 Feb 2022 23:28:50 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=28800
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - f568366e3665210d7c96f7395daed9724c32fd0b
+      X-Memc-Age:
+      - '2565'
+      X-Memc-Expires:
+      - '14769'
+      Etag:
+      - W/"3e74376272c7163d2895c057495a275d"
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 e158a5cd644f102abc630a9f56b59d78.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - etWpG9yMuTFTLAlh0zey9VHv75w9_xOaZiIatvII75Ku8HLPIk5B6Q==
+      Age:
+      - '1243'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvdjVDRXQ4OGlEc3VvTWFXMVE1TXN1OVVaZEV0LmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0IjowLCJnZW5yZXMiOlt7ImlkIjoxMDc0OSwibmFtZSI6IlJvbWFuY2UifSx7ImlkIjoxOCwibmFtZSI6IkRyYW1hIn1dLCJob21lcGFnZSI6Imh0dHBzOi8vd3d3LmdhZ2EuY28uanAvaW50bHMveW91cmV5ZXN0ZWxsLyIsImlkIjo3MzAxNTQsImltZGJfaWQiOiJ0dDExMDUxOTc0Iiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJqYSIsIm9yaWdpbmFsX3RpdGxlIjoi44GN44G/44Gu556z44GM5ZWP44GE44GL44GR44Gm44GE44KLIiwib3ZlcnZpZXciOiJBIHRyYWdpYyBhY2NpZGVudCBsZWFkIHRvIEthb3JpJ3MgYmxpbmRuZXNzLCBidXQgc2hlIGNsaW5ncyB0byBsaWZlIGFuZCB0aGUgc21hbGxlciBwbGVhc3VyZXMgaXQgY2FuIHN0aWxsIGFmZm9yZCBoZXIuIFNoZSBtZWV0cyBSdWkgYW5kIGJlZ2lucyB0byB0YWxrIHRvIGhpbS4gUnVpIHdhcyBvbmNlIGEgcHJvbWlzaW5nIGtpY2tib3hlciwgYnV0IHNvbWV0aGluZyBoYXBwZW5lZCBpbiBoaXMgcGFzdC4gS2FvcmkncyBzbWlsZSBicmluZ3Mgb3V0IGEgY2hhbmdlIGluIFJ1aS4gSG93ZXZlciwgdGhlIHR3byBhcmUgY29ubmVjdGVkIGluIG1vcmUgdGhhbiBvbmUgd2F5LiBSdWkgYXR0ZW1wdHMgdG8gZG8gd2hhdCBpcyByaWdodC4iLCJwb3B1bGFyaXR5IjoxMy45MzYsInBvc3Rlcl9wYXRoIjoiL2NWbjhFM0Z4Ymk4SHpZWXRhU2ZzYmxZQzRnbC5qcGciLCJwcm9kdWN0aW9uX2NvbXBhbmllcyI6W3siaWQiOjEzODIwMywibG9nb19wYXRoIjpudWxsLCJuYW1lIjoiRHJhZ29uZmx5IEVudGVydGFpbm1lbnQiLCJvcmlnaW5fY291bnRyeSI6IkpQIn0seyJpZCI6MTQ2MDIsImxvZ29fcGF0aCI6Ii90OWVxeDVRQ0h0dThMeHhnWXppdnFySkFvc3AucG5nIiwibmFtZSI6IkFNVVNFIiwib3JpZ2luX2NvdW50cnkiOiJKUCJ9LHsiaWQiOjg0MDQ4LCJsb2dvX3BhdGgiOiIvbnU4UThJdkcyZmF6ZUk3YXhUblVoQXZ6cnF5LnBuZyIsIm5hbWUiOiJHYWdhIENvcnBvcmF0aW9uIiwib3JpZ2luX2NvdW50cnkiOiJKUCJ9LHsiaWQiOjEwNDE4NCwibG9nb19wYXRoIjpudWxsLCJuYW1lIjoiTGF3c29uIEVudGVydGFpbm1lbnQiLCJvcmlnaW5fY291bnRyeSI6IkpQIn1dLCJwcm9kdWN0aW9uX2NvdW50cmllcyI6W3siaXNvXzMxNjZfMSI6IkpQIiwibmFtZSI6IkphcGFuIn1dLCJyZWxlYXNlX2RhdGUiOiIyMDIwLTEwLTIzIiwicmV2ZW51ZSI6MCwicnVudGltZSI6MTIzLCJzcG9rZW5fbGFuZ3VhZ2VzIjpbeyJlbmdsaXNoX25hbWUiOiJKYXBhbmVzZSIsImlzb182MzlfMSI6ImphIiwibmFtZSI6IuaXpeacrOiqniJ9XSwic3RhdHVzIjoiUmVsZWFzZWQiLCJ0YWdsaW5lIjoiIiwidGl0bGUiOiJZb3VyIEV5ZXMgVGVsbCIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjo4LjgsInZvdGVfY291bnQiOjIyN30=
+  recorded_at: Sat, 05 Feb 2022 23:49:33 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/83542?api_key=fake_api_key
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - b0d33aec081893155ed37a005f34d18c2363f76d
+      X-Memc-Age:
+      - '9756'
+      X-Memc-Expires:
+      - '5621'
+      Date:
+      - Sat, 05 Feb 2022 23:28:51 GMT
+      Cache-Control:
+      - public, max-age=28800
+      Etag:
+      - W/"92a50e4414d0ef4f1cb3101b50026dca"
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 28d79637e27f11e3ab19a9515e273a5a.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - scJKTXkfwtday0BV1H3123gXoqZnMz3_tzLMYCCY86TcjWoTLrbQxg==
+      Age:
+      - '1242'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adult":false,"backdrop_path":"/2lw4O1QOnJIVYaLrVuQyjtjwOuN.jpg","belongs_to_collection":null,"budget":102000000,"genres":[{"id":18,"name":"Drama"},{"id":878,"name":"Science
+        Fiction"}],"homepage":"http://cloudatlas.warnerbros.com/","id":83542,"imdb_id":"tt1371111","original_language":"en","original_title":"Cloud
+        Atlas","overview":"A set of six nested stories spanning time between the 19th
+        century and a distant post-apocalyptic future. Cloud Atlas explores how the
+        actions and consequences of individual lives impact one another throughout
+        the past, the present and the future. Action, mystery and romance weave through
+        the story as one soul is shaped from a killer into a hero and a single act
+        of kindness ripples across centuries to inspire a revolution in the distant
+        future.  Based on the award winning novel by David Mitchell. Directed by Tom
+        Tykwer and the Wachowskis.","popularity":29.632,"poster_path":"/amNMifaMEd0FBOR289OcnRAJjTI.jpg","production_companies":[{"id":11080,"logo_path":null,"name":"Cloud
+        Atlas Productions","origin_country":"US"},{"id":450,"logo_path":null,"name":"Anarchos
+        Productions","origin_country":""},{"id":7829,"logo_path":null,"name":"Ascension
+        Pictures","origin_country":""},{"id":19621,"logo_path":null,"name":"Dreams
+        of Dragon Picture","origin_country":""},{"id":11082,"logo_path":null,"name":"Five
+        Drops","origin_country":""},{"id":11083,"logo_path":null,"name":"Media Asia
+        Group","origin_country":""},{"id":96,"logo_path":"/9ps82gVzUeNdkjmLzoGDQLiLDio.png","name":"X
+        Filme Creative Pool","origin_country":"DE"}],"production_countries":[{"iso_3166_1":"CN","name":"China"},{"iso_3166_1":"DE","name":"Germany"},{"iso_3166_1":"HK","name":"Hong
+        Kong"},{"iso_3166_1":"US","name":"United States of America"}],"release_date":"2012-10-26","revenue":130482868,"runtime":172,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"Everything
+        is Connected","title":"Cloud Atlas","video":false,"vote_average":6.9,"vote_count":6010}'
+  recorded_at: Sat, 05 Feb 2022 23:49:33 GMT
+recorded_with: VCR 6.0.0

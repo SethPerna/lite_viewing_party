@@ -4,8 +4,11 @@ class MovieDetail
               :runtime,
               :genre,
               :summary,
-              :id
+              :id,
+              :poster
+
   def initialize(data)
+    @poster = data[:poster_path]
     @id = data[:id]
     @title = data[:title]
     @vote_avg = data[:vote_average]
