@@ -4,6 +4,17 @@ class User < ApplicationRecord
 
   validates_presence_of :password_digest
   validates_presence_of :name, :email
+  authentication
   validates_uniqueness_of :email
   has_secure_password
+
+
+  def invites
+    parties.where.not(host: id)
+  end
+
+  def hosting
+    parties.where(host: id)
+  end
+
 end

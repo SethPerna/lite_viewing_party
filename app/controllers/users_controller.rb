@@ -15,6 +15,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @invited_parties = @user.invites
+    @movies = @user.parties.map { |party| SingleMovie.new.search(party.movie_id) }
+    @host_parties = @user.hosting
   end
 
   def discover

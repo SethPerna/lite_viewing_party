@@ -4,22 +4,32 @@
 <div class="discover_movies">
   <%= button_to "Discover Movies", "/users/#{@user.id}/discover", method: :get %>
 </div>
-<div class="viewing_parties">
-  <p>Upcoming Parties:
-  <% @user.parties.each do |party| %>
-    <%= party.movie %>
-    <div>
-        <div class= "invites-<%= party.id %>">
-      <h1>Party Guests: </h1>
-
-      <% party.users.each do |user| %>
-        <% if party.host == user.id %>
-          <p class=<%="#{user.name}"%>><b><%= user.name %></b></p>
-        <% else %>
-          <p><%= user.name %></p>
-        <% end %>
-      <% end %>
-        </div>
-    </div>
-  <% end %></p>
+<div class ="viewing-parties">
+<div class= "invited">
+  <h1>My Invitations</h1>
+  <%= @invited_parties.each do |party| %>
+    <p>Movie: <%= link_to party.movie, user_movie_path(@user, party.movie_id)  %></p>
+    <p>Date: <%= party.date %> Time: <%= party.start_time %></p>
+    <p>Host: <%= party.find_host %></p>
+    <ul>
+    <p>Guests <% party.users.each do |user| %></p>
+      <li> <%= user.name %></li>
+    <% end %>
+    </ul>
+      <img src="https://image.tmdb.org/t/p/original<%= @movies.find {|movie| movie.id == party.movie_id}.poster  %>" alt="Italian Trulli">
+  <% end %>
 </div>
+<div class= "hosted-parties">
+  <h1>MY PARTIES:</h1>
+<% @host_parties. each do |party| %>
+    <p>Movie: <%= link_to party.movie, user_movie_path(@user, party.movie_id)  %></p>
+    <p>Date: <%= party.date %> Time: <%= party.start_time %></p>
+    <ul>
+    <p>Guests <% party.users.each do |user| %></p>
+      <li> <%= user.name %></li>
+    <% end %>
+    </ul>
+      <img src="https://image.tmdb.org/t/p/original<%= @movies.find {|movie| movie.id == party.movie_id}.poster  %>" alt="Italian Trulli">
+  <% end %>
+</div>
+ </div>
