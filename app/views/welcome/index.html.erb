@@ -6,3 +6,6 @@
     <p>Name: <%= link_to user.name, user_path(user) %></p>
   <% end %>
 </div>
+<div class="login">
+  <%= button_to 'Login', '/login', method: :get %>
+</div>

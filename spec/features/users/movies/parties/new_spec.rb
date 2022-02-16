@@ -1,8 +1,8 @@
 require 'rails_helper'
 RSpec.describe 'new viewing party page' do
   it 'has title and form' do
-    user_1 = User.create!(name: 'user', email: 'email')
-    user_2 = User.create!(name: 'user 2', email: 'email_2')
+    user_1 = User.create!(name: 'user', email: 'email', password: '1234', password_confirmation: '1234')
+    user_2 = User.create!(name: 'user 2', email: 'email_2', password: '1234', password_confirmation: '1234')
 
     VCR.use_cassette('your_eyes_tell_new') do
       visit new_user_movie_party_path(user_1, '730154')
@@ -23,8 +23,8 @@ RSpec.describe 'new viewing party page' do
     end
   end
   it 'wont let duration of the party be shorter than runtime of the movie', :vcr do
-    user_1 = User.create!(name: 'user', email: 'email')
-    user_2 = User.create!(name: 'user 2', email: 'email_2')
+    user_1 = User.create!(name: 'user', email: 'email', password: '1234', password_confirmation: '1234')
+    user_2 = User.create!(name: 'user 2', email: 'email_2', password: '1234', password_confirmation: '1234')
 
     visit new_user_movie_party_path(user_1, '730154')
     within '.new-party-form' do
@@ -45,10 +45,10 @@ RSpec.describe 'new viewing party page' do
   end
 
   it 'invites users to the party that are checked off in form', :vcr do
-    user_1 = User.create!(name: 'user', email: 'email')
-    user_2 = User.create!(name: 'user 2', email: 'email_2')
-    user_3 = User.create!(name: 'user 3', email: 'email_3')
-    user_4 = User.create!(name: 'user 4', email: 'email_4')
+    user_1 = User.create!(name: 'user', email: 'email', password: '1234', password_confirmation: '1234')
+    user_2 = User.create!(name: 'user 2', email: 'email_2', password: '1234', password_confirmation: '1234')
+    user_3 = User.create!(name: 'user 3', email: 'email_3', password: '1234', password_confirmation: '1234')
+    user_4 = User.create!(name: 'user 4', email: 'email_4', password: '1234', password_confirmation: '1234')
     visit new_user_movie_party_path(user_1, '730154')
     within '.new-party-form' do
       fill_in 'Duration', with: 145
