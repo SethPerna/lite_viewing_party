@@ -28,6 +28,3 @@
 
 # Ignore application configuration
 /config/application.yml
-/app/channels
-/app/jobs
-/app/mailers
