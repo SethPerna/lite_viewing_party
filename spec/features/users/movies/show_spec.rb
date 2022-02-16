@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Users movie show page' do
   it 'has buttons to create viewing party and to return to discovery page' do
-    user = User.create!(name: 'user', email: 'email')
+    user = User.create!(name: 'user', email: 'email', password: '1234', password_confirmation: '1234')
     VCR.use_cassette('your_eyes_tell') do
       visit "/users/#{user.id}/movies/730154"
       within '.buttons' do
@@ -14,7 +14,7 @@ RSpec.describe 'Users movie show page' do
     end
   end
   it 'click create viewing party takes me to create page', :vcr do
-    user = User.create!(name: 'user', email: 'email')
+    user = User.create!(name: 'user', email: 'email', password: '1234', password_confirmation: '1234')
 
     visit "/users/#{user.id}/movies/730154"
     within '.buttons' do
@@ -24,7 +24,7 @@ RSpec.describe 'Users movie show page' do
   end
 
   it 'has movie title, average, runtime, genre(s), summary' do
-    user = User.create!(name: 'user', email: 'email')
+    user = User.create!(name: 'user', email: 'email', password: '1234', password_confirmation: '1234')
 
     VCR.use_cassette('your_eyes_tell') do
       visit "/users/#{user.id}/movies/730154"
@@ -38,7 +38,7 @@ RSpec.describe 'Users movie show page' do
     end
   end
   it 'review count & author info' do
-    user = User.create!(name: 'user', email: 'email')
+    user = User.create!(name: 'user', email: 'email', password: '1234', password_confirmation: '1234')
 
     VCR.use_cassette('cloud_atlas_reviews') do
       visit "/users/#{user.id}/movies/83542"
@@ -51,7 +51,7 @@ RSpec.describe 'Users movie show page' do
   end
 
   it 'lists the first ten cast members' do
-    user = User.create!(name: 'user', email: 'email')
+    user = User.create!(name: 'user', email: 'email', password: '1234', password_confirmation: '1234')
 
     VCR.use_cassette('cloud_atlas_cast') do
       visit "/users/#{user.id}/movies/83542"

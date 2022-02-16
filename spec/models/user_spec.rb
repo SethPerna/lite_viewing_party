@@ -6,7 +6,12 @@ RSpec.describe User, type: :model do
     it { should have_many(:parties).through(:user_parties) }
     it { should validate_presence_of(:email) }
     it { should validate_presence_of(:name) }
+    it { should have_secure_password }
+    it { should validate_presence_of(:password_digest)}
+    it { should validate_uniqueness_of(:email)}
   end
+
+
   describe '#invites' do
     it 'lists parties this person has been invited to!' do
       user = User.create!(name: 'Bill', email: 'Willy@hotmail.com')
@@ -38,4 +43,5 @@ RSpec.describe User, type: :model do
       expected = [party_1, party_3]
     end
   end
+
 end

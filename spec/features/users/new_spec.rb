@@ -6,6 +6,8 @@ RSpec.describe 'new user vew' do
 
     fill_in 'user_email', with: 'User@email.com'
     fill_in 'user_name', with: 'User Name'
+    fill_in 'Password', with: '1234'
+    fill_in 'Password confirmation', with: '1234'
 
     click_on 'Register'
 
@@ -20,10 +22,27 @@ RSpec.describe 'new user vew' do
 
     click_on 'Register'
     within '.flash' do
-      expect(page).to have_content('User Not Registered')
+      expect(page).to have_content('Invalid Entry')
     end
     within '.error-msgs' do
       expect(page).to have_content(/Name can't be blank Email can't be blank/)
+    end
+  end
+  it 'wont register a user with non matching passwords ' do
+    visit register_path
+
+    fill_in 'user_email', with: 'User@email.com'
+    fill_in 'user_name', with: 'User Name'
+    fill_in 'Password', with: '1234'
+    fill_in 'Password confirmation', with: '12345'
+
+    click_on 'Register'
+    within '.flash' do
+      expect(page).to have_content('Invalid Entry')
+    end
+    
+    within '.error-msgs' do
+      expect(page).to have_content(/Password confirmation doesn't match Password/)
     end
   end
 end
