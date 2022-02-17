@@ -15,7 +15,7 @@ RSpec.describe 'Users movies page' do
     VCR.use_cassette('your_eyes_tell') do
       within '.top-rated-movies' do
         expect(page.status_code).to eq(200)
-        expect(page).to have_content('Your Eyes Tell | Vote Average: 8.8 ')
+        expect(page).to have_content('Your Eyes Tell | Vote Average: 8.7 ')
         expect(page).to have_content('Dilwale Dulhania Le Jayenge | Vote Average: 8.7')
         expect(page).to have_link('Your Eyes Tell')
         click_link('Your Eyes Tell')

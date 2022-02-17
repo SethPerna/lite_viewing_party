@@ -58,13 +58,15 @@ RSpec.describe 'new viewing party page' do
       select '7 PM', from: '_time_4i'
       select '45', from: '_time_5i'
       check("invites_#{user_2.id}")
+    end
+  end
 
   it 'invites users to the party that are checked off in form' do
     VCR.use_cassette('new_movie_cassette') do
-      user_1 = User.create!(name: 'user', email: 'email')
-      user_2 = User.create!(name: 'user 2', email: 'email_2')
-      user_3 = User.create!(name: 'user 3', email: 'email_3')
-      user_4 = User.create!(name: 'user 4', email: 'email_4')
+      user_1 = User.create!(name: 'user', email: 'email_9', password: '1234', password_confirmation: '1234')
+      user_2 = User.create!(name: 'user 2', email: 'email_8', password: '1234', password_confirmation: '1234')
+      user_3 = User.create!(name: 'user 3', email: 'email_7', password: '1234', password_confirmation: '1234')
+      user_4 = User.create!(name: 'user 4', email: 'email_6', password: '1234', password_confirmation: '1234')
       visit new_user_movie_party_path(user_1, '730154')
       within '.new-party-form' do
         fill_in 'Duration', with: 145

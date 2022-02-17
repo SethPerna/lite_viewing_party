@@ -14,8 +14,8 @@ RSpec.describe User, type: :model do
 
   describe '#invites' do
     it 'lists parties this person has been invited to!' do
-      user = User.create!(name: 'Bill', email: 'Willy@hotmail.com')
-      user_2 = User.create!(name: 'Bill', email: 'Willy@hotmail.com')
+      user = User.create!(name: 'Bill', email: 'Willy_1@hotmail.com', password: '1234', password_confirmation: '1234')
+      user_2 = User.create!(name: 'Bill', email: 'Willy@hotmail.com', password: '1234', password_confirmation: '1234')
       party_1 = Party.create!(date: '2022-02-06', duration: 160, start_time: '7:00', movie: 'Your Eyes Tell',
                               host: user.id, movie_id: 730_154)
       party_2 = Party.create!(date: '2022-02-06', duration: 160, start_time: '7:00', movie: 'Your Eyes Tell',
@@ -28,8 +28,8 @@ RSpec.describe User, type: :model do
   end
   describe '#hosting' do
     it 'lists parties this person has been invited to!' do
-      user = User.create!(name: 'Bill', email: 'Willy@hotmail.com')
-      user_2 = User.create!(name: 'Bill', email: 'Willy@hotmail.com')
+      user = User.create!(name: 'Bill', email: 'Dilly@hotmail.com', password: '1234', password_confirmation: '1234')
+      user_2 = User.create!(name: 'Bill', email: 'Willy_0@hotmail.com', password: '1234', password_confirmation: '1234')
       party_1 = Party.create!(date: '2022-02-06', duration: 160, start_time: '7:00', movie: 'Your Eyes Tell',
                               host: user.id, movie_id: 730_154)
       party_2 = Party.create!(date: '2022-02-06', duration: 160, start_time: '7:00', movie: 'Your Eyes Tell',
