@@ -18,7 +18,7 @@ class UsersMoviesPartiesController < ApplicationController
           UserParty.create(party_id: party.id, user_id: invite.to_i) unless invite.nil?
         end
       end
-      redirect_to user_path(params[:user_id])
+      redirect_to dashboard_path
     end
   end
 

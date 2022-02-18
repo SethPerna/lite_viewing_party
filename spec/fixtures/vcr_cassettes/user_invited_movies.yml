@@ -25,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Thu, 17 Feb 2022 14:19:50 GMT
+      - Fri, 18 Feb 2022 00:14:39 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -42,23 +42,21 @@ http_interactions:
       X-Memc-Key:
       - b0d33aec081893155ed37a005f34d18c2363f76d
       X-Memc-Age:
-      - '12013'
+      - '12963'
       X-Memc-Expires:
-      - '5903'
+      - '4572'
       Etag:
       - W/"3ecb02c58e5250e8134a0a06176697a5"
       Vary:
       - Accept-Encoding
       X-Cache:
-      - Hit from cloudfront
+      - Miss from cloudfront
       Via:
-      - 1.1 c974a69619205281e0e6b8e73f95e4b4.cloudfront.net (CloudFront)
+      - 1.1 4f7671bb51952e26d4af9f468d98bc84.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - IAD89-C3
+      - PHL50-C1
       X-Amz-Cf-Id:
-      - x7XO6fql77Y-3LMvyWAfdFIaa-SIK5w4eXsjUdrkLv2DzQ4wrlHbUw==
-      Age:
-      - '2628'
+      - LXanxsjUZ0m5Y2sM1j3ijiJJo3tapC-6mfjzRID1q3kMWkHHiEwN0g==
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/2lw4O1QOnJIVYaLrVuQyjtjwOuN.jpg","belongs_to_collection":null,"budget":102000000,"genres":[{"id":18,"name":"Drama"},{"id":878,"name":"Science
@@ -80,5 +78,5 @@ http_interactions:
         Filme Creative Pool","origin_country":"DE"}],"production_countries":[{"iso_3166_1":"CN","name":"China"},{"iso_3166_1":"DE","name":"Germany"},{"iso_3166_1":"HK","name":"Hong
         Kong"},{"iso_3166_1":"US","name":"United States of America"}],"release_date":"2012-10-26","revenue":130482868,"runtime":172,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"Everything
         is Connected","title":"Cloud Atlas","video":false,"vote_average":6.9,"vote_count":6024}'
-  recorded_at: Thu, 17 Feb 2022 15:03:38 GMT
+  recorded_at: Fri, 18 Feb 2022 00:14:39 GMT
 recorded_with: VCR 6.0.0

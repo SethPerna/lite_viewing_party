@@ -6,7 +6,7 @@ RSpec.describe 'login page' do
     fill_in "Email", with: "#{user_1.email}"
     fill_in "Password", with: "#{user_1.password}"
     click_button("Login")
-    expect(current_path).to eq("/users/#{user_1.id}")
+    expect(current_path).to eq("/dashboard")
   end
 
   it 'has fields to login when correctly submitted I am take to my show page' do

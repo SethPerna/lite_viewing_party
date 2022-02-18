@@ -10,15 +10,6 @@ RSpec.describe 'landing page' do
       expect(page).to have_content('Viewing Page Party')
     end
 
-    within '.all-users' do
-      expect(page).to have_link(user_1.name)
-      expect(page).to have_link(user_2.name)
-      expect(page).to have_link(user_3.name)
-
-      click_link(user_1.name)
-
-      expect(current_path).to eq(user_path(user_1))
-    end
 
     visit root_path
     within '.new-user' do

@@ -1,8 +1,8 @@
 <div class= "discover-movies">
 
-  <%= button_to "Top Rated Movies", "/users/#{@user.id}/movies", method: :get, params: {top_rated: 'top_rated'}  %>
+  <%= button_to "Top Rated Movies", "/dashboard/movies", method: :get, params: {top_rated: 'top_rated'}  %>
 
-  <%= form_with url: "/users/#{@user.id}/movies", local: true do |form| %>
+  <%= form_with url: "/dashboard/movies", local: true do |form| %>
     <%= form.label :search, 'Search For Movie by Name' %>
     <%= form.text_field :search %>
     <%= form.submit 'Search' %>

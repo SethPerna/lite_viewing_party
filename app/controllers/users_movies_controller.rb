@@ -1,6 +1,6 @@
 class UsersMoviesController < ApplicationController
   def index
-    @user = User.find(params[:user_id])
+    @user = User.find(session[:user_id])
     if params[:top_rated].present?
       @top_movies = TopRated.new.movies
       render 'users/movies/index'
@@ -8,7 +8,7 @@ class UsersMoviesController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:user_id])
+    @user = User.find(session[:user_id])
     if params[:search].present?
       @search_movie = SearchMovie.new.search(params[:search])
       render 'users/movies/index'
@@ -16,7 +16,7 @@ class UsersMoviesController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:user_id])
+    @user = User.find(session[:user_id])
     @movie = SingleMovie.new.search(params[:id])
     @reviews = FindReview.new.search(params[:id])
     @cast = MovieFacade.cast(params[:id])

@@ -1,25 +1,31 @@
 require 'rails_helper'
 
 RSpec.describe 'Users movie show page' do
+  before :each do
+    @user_1 = User.create!(name: 'user_1', email: 'email@gmail.com', password: '1234', password_confirmation: '1234')
+    visit "/login"
+    fill_in "Email", with: "#{@user_1.email}"
+    fill_in "Password", with: "#{@user_1.password}"
+    click_button("Login")
+    expect(current_path).to eq("/dashboard")
+  end
   it 'has buttons to create viewing party and to return to discovery page' do
-    user = User.create!(name: 'user', email: 'email', password: '1234', password_confirmation: '1234')
     VCR.use_cassette('your_eyes_tell') do
-      visit "/users/#{user.id}/movies/730154"
+      visit "/dashboard/movies/730154"
       within '.buttons' do
         expect(page).to have_button('Create Viewing Party')
         expect(page).to have_button('Discover Page')
         click_button('Discover Page')
-        expect(current_path).to eq("/users/#{user.id}/discover")
+        expect(current_path).to eq("/dashboard/discover")
       end
     end
   end
   it 'click create viewing party takes me to create page', :vcr do
-    user = User.create!(name: 'user', email: 'email', password: '1234', password_confirmation: '1234')
 
-    visit "/users/#{user.id}/movies/730154"
+    visit "/dashboard/movies/730154"
     within '.buttons' do
       click_button('Create Viewing Party')
-      expect(current_path).to eq(new_user_movie_party_path(user, '730154'))
+      expect(current_path).to eq(new_user_movie_party_path(@user, '730154'))
     end
   end
 

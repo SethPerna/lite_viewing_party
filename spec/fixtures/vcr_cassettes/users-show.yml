@@ -24,8 +24,6 @@ http_interactions:
       - chunked
       Connection:
       - keep-alive
-      Date:
-      - Thu, 17 Feb 2022 14:18:26 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -35,8 +33,6 @@ http_interactions:
       Access-Control-Expose-Headers:
       - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
         Content-Length, Content-Range
-      Cache-Control:
-      - public, max-age=28800
       X-Memc:
       - HIT
       X-Memc-Key:
@@ -45,6 +41,10 @@ http_interactions:
       - '15805'
       X-Memc-Expires:
       - '158'
+      Date:
+      - Fri, 18 Feb 2022 00:04:56 GMT
+      Cache-Control:
+      - public, max-age=28800
       Etag:
       - W/"3e05d0b7d662a5501b6d96d9d1c29fea"
       Vary:
@@ -52,18 +52,18 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 ba82151bf51e4c722c5305c983d8b71e.cloudfront.net (CloudFront)
+      - 1.1 39a169e5169cc741a7c793f95d144134.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - IAD89-C3
+      - PHL50-C1
       X-Amz-Cf-Id:
-      - 7dTm4jR0C0L8BCHuPmAG7Z9Za5RtF-RNg9GQ6zH3rPS1uman1tFJtg==
+      - EP3awVnpeoy1eubDKg1xPWQcVRNeo4f9_N6xg1K9YnfNG073iwucmA==
       Age:
-      - '2837'
+      - '569'
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvdjVDRXQ4OGlEc3VvTWFXMVE1TXN1OVVaZEV0LmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0IjowLCJnZW5yZXMiOlt7ImlkIjoxMDc0OSwibmFtZSI6IlJvbWFuY2UifSx7ImlkIjoxOCwibmFtZSI6IkRyYW1hIn1dLCJob21lcGFnZSI6Imh0dHBzOi8vd3d3LmdhZ2EuY28uanAvaW50bHMveW91cmV5ZXN0ZWxsLyIsImlkIjo3MzAxNTQsImltZGJfaWQiOiJ0dDExMDUxOTc0Iiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJqYSIsIm9yaWdpbmFsX3RpdGxlIjoi44GN44G/44Gu556z44GM5ZWP44GE44GL44GR44Gm44GE44KLIiwib3ZlcnZpZXciOiJBIHRyYWdpYyBhY2NpZGVudCBsZWFkIHRvIEthb3JpJ3MgYmxpbmRuZXNzLCBidXQgc2hlIGNsaW5ncyB0byBsaWZlIGFuZCB0aGUgc21hbGxlciBwbGVhc3VyZXMgaXQgY2FuIHN0aWxsIGFmZm9yZCBoZXIuIFNoZSBtZWV0cyBSdWkgYW5kIGJlZ2lucyB0byB0YWxrIHRvIGhpbS4gUnVpIHdhcyBvbmNlIGEgcHJvbWlzaW5nIGtpY2tib3hlciwgYnV0IHNvbWV0aGluZyBoYXBwZW5lZCBpbiBoaXMgcGFzdC4gS2FvcmkncyBzbWlsZSBicmluZ3Mgb3V0IGEgY2hhbmdlIGluIFJ1aS4gSG93ZXZlciwgdGhlIHR3byBhcmUgY29ubmVjdGVkIGluIG1vcmUgdGhhbiBvbmUgd2F5LiBSdWkgYXR0ZW1wdHMgdG8gZG8gd2hhdCBpcyByaWdodC4iLCJwb3B1bGFyaXR5IjoxNy4xNCwicG9zdGVyX3BhdGgiOiIvY1ZuOEUzRnhiaThIellZdGFTZnNibFlDNGdsLmpwZyIsInByb2R1Y3Rpb25fY29tcGFuaWVzIjpbeyJpZCI6MTM4MjAzLCJsb2dvX3BhdGgiOm51bGwsIm5hbWUiOiJEcmFnb25mbHkgRW50ZXJ0YWlubWVudCIsIm9yaWdpbl9jb3VudHJ5IjoiSlAifSx7ImlkIjoxNDYwMiwibG9nb19wYXRoIjoiL3Q5ZXF4NVFDSHR1OEx4eGdZeml2cXJKQW9zcC5wbmciLCJuYW1lIjoiQU1VU0UiLCJvcmlnaW5fY291bnRyeSI6IkpQIn0seyJpZCI6ODQwNDgsImxvZ29fcGF0aCI6Ii9udThROEl2RzJmYXplSTdheFRuVWhBdnpycXkucG5nIiwibmFtZSI6IkdhZ2EgQ29ycG9yYXRpb24iLCJvcmlnaW5fY291bnRyeSI6IkpQIn0seyJpZCI6MTA0MTg0LCJsb2dvX3BhdGgiOm51bGwsIm5hbWUiOiJMYXdzb24gRW50ZXJ0YWlubWVudCIsIm9yaWdpbl9jb3VudHJ5IjoiSlAifV0sInByb2R1Y3Rpb25fY291bnRyaWVzIjpbeyJpc29fMzE2Nl8xIjoiSlAiLCJuYW1lIjoiSmFwYW4ifV0sInJlbGVhc2VfZGF0ZSI6IjIwMjAtMTAtMjMiLCJyZXZlbnVlIjowLCJydW50aW1lIjoxMjMsInNwb2tlbl9sYW5ndWFnZXMiOlt7ImVuZ2xpc2hfbmFtZSI6IkphcGFuZXNlIiwiaXNvXzYzOV8xIjoiamEiLCJuYW1lIjoi5pel5pys6KqeIn1dLCJzdGF0dXMiOiJSZWxlYXNlZCIsInRhZ2xpbmUiOiIiLCJ0aXRsZSI6IllvdXIgRXllcyBUZWxsIiwidmlkZW8iOmZhbHNlLCJ2b3RlX2F2ZXJhZ2UiOjguNywidm90ZV9jb3VudCI6MjQxfQ==
-  recorded_at: Thu, 17 Feb 2022 15:05:43 GMT
+  recorded_at: Fri, 18 Feb 2022 00:14:25 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/83542?api_key=fake_api_key
@@ -89,7 +89,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Thu, 17 Feb 2022 14:19:50 GMT
+      - Fri, 18 Feb 2022 00:14:25 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -106,23 +106,21 @@ http_interactions:
       X-Memc-Key:
       - b0d33aec081893155ed37a005f34d18c2363f76d
       X-Memc-Age:
-      - '12013'
+      - '12949'
       X-Memc-Expires:
-      - '5903'
+      - '4586'
       Etag:
       - W/"3ecb02c58e5250e8134a0a06176697a5"
       Vary:
       - Accept-Encoding
       X-Cache:
-      - Hit from cloudfront
+      - Miss from cloudfront
       Via:
-      - 1.1 23c9ec01b6f4151f654547c0190aeebe.cloudfront.net (CloudFront)
+      - 1.1 675b284655681c433b27b85b9911e050.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - IAD89-C3
+      - PHL50-C1
       X-Amz-Cf-Id:
-      - _FpFl3vrUVHlmThGCpUKowOmQtPBdkMo1cvzMt9pwbAYx723Rdi3Og==
-      Age:
-      - '2753'
+      - GfFt_-WYzN9iYKOz64wt1IIpcnxL2ss5IsqDrZv53zCyYJUGrLi-hw==
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/2lw4O1QOnJIVYaLrVuQyjtjwOuN.jpg","belongs_to_collection":null,"budget":102000000,"genres":[{"id":18,"name":"Drama"},{"id":878,"name":"Science
@@ -144,5 +142,5 @@ http_interactions:
         Filme Creative Pool","origin_country":"DE"}],"production_countries":[{"iso_3166_1":"CN","name":"China"},{"iso_3166_1":"DE","name":"Germany"},{"iso_3166_1":"HK","name":"Hong
         Kong"},{"iso_3166_1":"US","name":"United States of America"}],"release_date":"2012-10-26","revenue":130482868,"runtime":172,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"Everything
         is Connected","title":"Cloud Atlas","video":false,"vote_average":6.9,"vote_count":6024}'
-  recorded_at: Thu, 17 Feb 2022 15:05:43 GMT
+  recorded_at: Fri, 18 Feb 2022 00:14:25 GMT
 recorded_with: VCR 6.0.0

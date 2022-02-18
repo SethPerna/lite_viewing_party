@@ -1,11 +1,17 @@
 require 'rails_helper'
 RSpec.describe 'new viewing party page' do
+  before :each do
+    @user_1 = User.create!(name: 'user', email: 'email', password: '1234', password_confirmation: '1234')
+    visit '/login'
+    fill_in :email, with: 'ChuckNorris@ChuckNorris.com'
+    fill_in :password, with: 'LFG'
+  end
   it 'has title and form' do
-    user_1 = User.create!(name: 'user', email: 'email', password: '1234', password_confirmation: '1234')
+
     user_2 = User.create!(name: 'user 2', email: 'email_2', password: '1234', password_confirmation: '1234')
 
     VCR.use_cassette('your_eyes_tell_new') do
-      visit new_user_movie_party_path(user_1, '730154')
+      visit new_user_movie_party_path(@user_1, '730154')
       within '.new-party-form' do
         expect(page).to have_content('Your Eyes Tell')
         fill_in 'Duration', with: 130
@@ -17,7 +23,7 @@ RSpec.describe 'new viewing party page' do
         check("invites_#{user_2.id}")
         expect(page).to have_button('Create Party')
         click_button('Create Party')
-        expect(current_path).to eq(user_path(user_1))
+        expect(current_path).to eq(dashboard_path)
       end
     end
   end
